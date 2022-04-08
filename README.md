@@ -34,21 +34,24 @@ For the machine learning algorithmic trading model, the y target is the signal. 
 This section discusses how tuning the baseline trading algorithm affected its performance. 
 
 Baseline Report
+
 ![Baseline Report](./Images/baseline_report.png)
 
 Baseline Plot
+
 ![Baseline Plot](./Images/Baseline_Returns_3_month.png)
 
-* Adjusting the size of the training dataset
+* **Adjusting the size of the training dataset**
+
 The training size was adjusted from 3 months to 7 months. Other time frames were attempted (i.e., 2 months, 6 months, 12 months, 16 months, 20 months), but 7 months provided the best improvement. It improved the accuracy by 1% (from 55% to 56%). It also improved the precision of the "-1" class by 2% (from 43% to 45%).  
 
 
 
-* Adjusting the SMA windows
+* **Adjusting the SMA windows**
 
-* Combining the adjustments 
+* **Combining the adjustments** 
 
-* New classifier model 
+* **New classifier model** 
 
 ---
 
