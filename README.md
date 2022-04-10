@@ -81,7 +81,7 @@ Logistic Regression Report
 
 Logistic Regression Plot
 
-![Logistic Regression](./Images/logistic_regression_plot.png)
+![Logistic Regression](./Images/logistic_regression_plot2.png)
 
 ---
 
