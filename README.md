@@ -33,7 +33,7 @@ For the machine learning algorithmic trading model, the y target is the signal. 
 ## Results 
 This section discusses how tuning the baseline trading algorithm affected its performance. 
 
-The baseline trading algorithm has an accuracy of 55%. It is better at predicting the "1" class than the "-1" class as the precision for the "1" class is 56% and the precision for the "-1" class is 43%. Until 2019, the strategy and actual returns are pretty well matched to each other. Then, the strategy returns rise above the actual returns around 2019 and pretty much remain above through the end of the data in 2021. 
+The baseline trading algorithm has an accuracy of 55%. It is better at predicting the "1" class than the "-1" class as the precision for the "1" class is 56% and the precision for the "-1" class is 43%. The recall for the "-1" class is much less than the recall for the "1" class (4% compared to 96%). Until 2019, the strategy and actual returns are pretty well matched to each other. Then, the strategy returns rise above the actual returns around 2019 and pretty much remain above through the end of the data in 2021. At the end of the data (beginning of 2021), the strategy returns are above the actual returns by a little over 10%.  
 
 Baseline Report
 
