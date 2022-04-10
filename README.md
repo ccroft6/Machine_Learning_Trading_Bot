@@ -41,7 +41,7 @@ Baseline Report
 
 Baseline Plot
 
-![Baseline Plot](./Images/Baseline_Returns_3_month.png)
+![Baseline Plot](./Images/baseline_plot.png)
 
 * **Adjusting the size of the training dataset:** The training size was adjusted from 3 months to 7 months. Other sizes were attempted (i.e., 2 months, 6 months, 12 months, 16 months, 20 months), but 7 months provided the best improvement. It improved the accuracy by 1% (from 55% to 56%). It also improved the precision of the "-1" class by 2% (from 43% to 45%).  
 
@@ -51,7 +51,7 @@ Baseline Plot
 
 7-Month Offset Plot
 
-![7-Month Offset Plot](./Images/7_month_Actual_vs_Strategy.png)
+![7-Month Offset Plot](./Images/7_month_plot.png)
 
 * **Adjusting the SMA windows:** The SMA fast, short window was increased from 4 to 6, and the SMA slow, long window was increased from 100 to 140. Other window adjustments were attempted (i.e., 4;150, 6;100, 10;200, 8;180, 12;300), but a short window of 6 and a long window of 140 provided the best improvement. It improved the accuracy by 1% (from 55% to 56%). It also improved the precision of the "-1" class by 5% (from 43% to 48%).
 
@@ -61,7 +61,7 @@ Increase Windows Report
 
 Increase Windows Plot
 
-![Increase Windows](./Images/Increase_Windows_Actual_vs_Strategy.png)
+![Increase Windows](./Images/increase_windows_plot.png)
 
 * **Combining the adjustments:** Since the above two adjustments improved the accuracy of the training algorithm, I combined them to see what the result would be. Therefore, I increased the training size to 7 months and increased the short- and long-windows to 6 and 140, respectively. This combination resulted in 56% accuracy, which is 1% better than the baseline but is the same as the above two adjustments. The precision of the "-1" class is 48%, which is 5% higher than the baseline; the precision of the "1" class is 56%, which is the same as the baseline.  
 
@@ -71,7 +71,7 @@ Increase Size and Windows Report
 
 Increase Size and Windows Plot
 
-![Increase Size and Windows](./Images/IncreaseWindows_7month_Actual_vs_Strategy.png)
+![Increase Size and Windows](./Images/increase_windows_and_7month_plot.png)
 
 * **New classifier model:** I chose to look at how using a logistic regression model would affect the algorithm. The logistic regression model resulted in an accuracy of 52%, which is 3% lower than the baseline. mbination resulted in 56% accuracy, which is 1% better than the baseline but is the same as the above two adjustments. The precision of the "-1" class is 44%, which is 1% higher than the baseline. The precision of the "1" class is the same at 56%. In 2018, the strategy returns are lower than the actual returns. The strategy returns go above the actual returns from around 2019 to almost the end of 2020. At the beginning of 2021, the strategy returns actually go below the actual returns. 
 
@@ -81,7 +81,7 @@ Logistic Regression Report
 
 Logistic Regression Plot
 
-![Logistic Regression](./Images/LogisticRegression_3month.png)
+![Logistic Regression](./Images/Logistic_regression_plot.png)
 
 ---
 
