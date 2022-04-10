@@ -33,7 +33,7 @@ For the machine learning algorithmic trading model, the y target is the signal. 
 ## Results 
 This section discusses how tuning the baseline trading algorithm affected its performance. 
 
-The baseline trading algorithm has an accuracy of 55%. It is better at predicting the "1" class than the "-1" class as the precision for the "1" class is 56% and the precision for the "-1" class is 43%. The recall for the "-1" class is much less than the recall for the "1" class (4% compared to 96%). Until 2019, the strategy and actual returns are pretty well matched to each other. Then, the strategy returns rise above the actual returns around 2019 and pretty much remain above through the end of the data in 2021. At the end of the data (beginning of 2021), the strategy returns are above the actual returns by a little over 10%.  
+The baseline trading algorithm has an accuracy of 55%. It is better at predicting the "1" class than the "-1" class as the precision for the "1" class is 56% and the precision for the "-1" class is 43%. In addition, the recall for the "-1" class is much less than the recall for the "1" class (4% compared to 96%). Until 2019, the strategy and actual returns are pretty well matched to each other. Then, the strategy returns rise above the actual returns around 2019 and pretty much remain above through the end of the data in 2021. At the end of the data (beginning of 2021), the strategy returns are above the actual returns by a little over 10%.  
 
 Baseline Report
 
@@ -43,7 +43,7 @@ Baseline Plot
 
 ![Baseline Plot](./Images/baseline_plot.png)
 
-* **Adjusting the size of the training dataset:** The training size was adjusted from 3 months to 7 months. Other sizes were attempted (i.e., 2 months, 6 months, 12 months, 16 months, 20 months), but 7 months provided the best improvement. It improved the accuracy by 1% (from 55% to 56%). It also improved the precision of the "-1" class by 2% (from 43% to 45%).  
+* **Adjusting the size of the training dataset:** The training size was adjusted from 3 months to 7 months. Other sizes were attempted (i.e., 2 months, 6 months, 12 months, 16 months, 20 months), but 7 months provided the best improvement. It improved the accuracy by 1% (from 55% to 56%). It also improved the precision of the "-1" class by 2% (from 43% to 45%). The recall for the "-1" class is still low, but it improved from 4% to 5%. The algorithm is still better at predicting the "1" class compared to the "-1" class. When looking at the plot, the actual returns were above the strategy returns from the end of 2018 to the beginning of 2020. Then, the strategy returns are higher than the actual returns from early 2020 to early 2021. At the end of the data (beginning of 2021), the strategy returns are above the actual returns by a little over 30%.   
 
 7-Month Offset Report
 
@@ -53,7 +53,7 @@ Baseline Plot
 
 ![7-Month Offset Plot](./Images/7_month_plot.png)
 
-* **Adjusting the SMA windows:** The SMA fast, short window was increased from 4 to 6, and the SMA slow, long window was increased from 100 to 140. Other window adjustments were attempted (i.e., 4;150, 6;100, 10;200, 8;180, 12;300), but a short window of 6 and a long window of 140 provided the best improvement. It improved the accuracy by 1% (from 55% to 56%). It also improved the precision of the "-1" class by 5% (from 43% to 48%).
+* **Adjusting the SMA windows:** The SMA fast, short window was increased from 4 to 6, and the SMA slow, long window was increased from 100 to 140. Other window adjustments were attempted (i.e., 4;150, 6;100, 10;200, 8;180, 12;300), but a short window of 6 and a long window of 140 provided the best improvement. It improved the accuracy by 1% (from 55% to 56%). It also improved the precision of the "-1" class by 5% (from 43% to 48%). However, the recall for the "-1" class decreased from 4% to 3%, compared to the baseline classification report. The algorithm is still better at predicting the "1" class compared to the "-1" class. Looking at the plot, the strategy returns rise above the actual returns near the end of 2018, and they remain above to the beginning of 2021. At the end of the data (beginning of 2021), the strategy returns are above the actual returns by a little over 10%.    
 
 Increase Windows Report
 
@@ -63,7 +63,7 @@ Increase Windows Plot
 
 ![Increase Windows](./Images/increase_windows_plot.png)
 
-* **Combining the adjustments:** Since the above two adjustments improved the accuracy of the training algorithm, I combined them to see what the result would be. Therefore, I increased the training size to 7 months and increased the short- and long-windows to 6 and 140, respectively. This combination resulted in 56% accuracy, which is 1% better than the baseline but is the same as the above two adjustments. The precision of the "-1" class is 48%, which is 5% higher than the baseline; the precision of the "1" class is 56%, which is the same as the baseline.  
+* **Combining the adjustments:** Since the above two adjustments improved the accuracy of the training algorithm, I combined them to see what the result would be. Therefore, I increased the training size to 7 months and increased the short- and long-windows to 6 and 140, respectively. This combination resulted in 56% accuracy, which is 1% better than the baseline but is the same as the above two adjustments. The precision of the "-1" class is 48%, which is 5% higher than the baseline; the precision of the "1" class is 56%, which is the same as the baseline. However, the recall for the "-1" class decreased to 1%, compared to the baseline 4%. The algorithm is still better at predicting the "1" class compared to the "-1" class. Looking at the plot, it naturally is a mix between the increased training size plot and the increased windows plot. It more closely resembles the increased training size plot in that the the actual returns were above the strategy returns from the end of 2018 to the beginning of 2020. However, there is a smaller gap between the actual returns and the strategy returns; the actual returns aren't that much higher than the strategy returns. Then, the strategy returns are higher than the actual returns from early 2020 to early 2021. There is a larger gap here, meaning the strategy returns are even higher than the actual returns compared to previous plots. At the end of the data (beginning of 2021), the strategy returns are above the actual returns by approximately 45%. This is the highest perentage that the strategy returns have been above the actual returns.         
 
 Increase Size and Windows Report
 
@@ -73,7 +73,7 @@ Increase Size and Windows Plot
 
 ![Increase Size and Windows](./Images/increase_windows_and_7month_plot.png)
 
-* **New classifier model:** I chose to look at how using a logistic regression model would affect the algorithm. The logistic regression model resulted in an accuracy of 52%, which is 3% lower than the baseline. mbination resulted in 56% accuracy, which is 1% better than the baseline but is the same as the above two adjustments. The precision of the "-1" class is 44%, which is 1% higher than the baseline. The precision of the "1" class is the same at 56%. In 2018, the strategy returns are lower than the actual returns. The strategy returns go above the actual returns from around 2019 to almost the end of 2020. At the beginning of 2021, the strategy returns actually go below the actual returns. 
+* **New classifier model:** I chose to look at how using a logistic regression model would affect the algorithm. The logistic regression model resulted in an accuracy of 52%, which is 3% lower than the baseline. The precision of the "-1" class is 44%, which is 1% higher than the baseline. The precision of the "1" class is the same at 56%. The recall for the "-1" class is higher than it has been for any of the trials; it is 33% for the "-1" class and 66% for the "1" class. Again, the algorithm is still better at predicting the "1" class compared to the "-1" class. From the end of 2017 to mid-2018, the strategy returns are lower than the actual returns. Then, the strategy returns go above the actual returns from around the end of 2018 to almost the end of 2020. At the beginning of 2021, the strategy returns actually go below the actual returns. At the end of the data (beginning of 2021), the actual returns are above the strategy returns by about 25%. 
 
 Logistic Regression Report
 
